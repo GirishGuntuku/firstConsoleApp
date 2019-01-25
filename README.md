@@ -1,6 +1,6 @@
 # firstConsoleApp
 
-###My App calculates sum and difference of numbers.
+My App calculates sum and difference of numbers.
 
 
 ## Screenshot of app running on console
