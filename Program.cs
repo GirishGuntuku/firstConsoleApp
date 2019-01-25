@@ -11,6 +11,7 @@ namespace myApp
             Double secondnum;
             Double total;
             var calType = "";
+            var ch = "";
             Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("-----------Welcome to calculator------------------");
 
@@ -30,31 +31,40 @@ namespace myApp
 
                 switch (calType)
                 {
-                    case '+':
+                    case "+":
                         total = add(firstnum, secondnum);
+                        Console.WriteLine($"Sum is {total}");
                         break;
-                    case '-':
+                    case "-":
                         total = sub(firstnum, secondnum);
+                        Console.WriteLine($"Difference is {total}");
                         break;
 
                 }
 
-            } while (ch == 'y');
+                Console.WriteLine("-----Do you want to continue, 'y' for yes and 'n' for no------");
+                ch = Console.ReadLine();
 
-            Console.ReadLine("-----Do you want to continue, 'y' for yes and 'n' for no------");
+            } while (ch == "y");
 
 
-            Double add(Double num1, Double num2)
+
+
+            Double add(Double a, Double b)
             {
                 Double result;
-                result = num1 + num2;
+                result = a + b;
                 return result;
             }
 
             Double sub(Double num1, Double num2)
             {
                 Double result;
-                reuslt = num1 + num2;
+                if (num1 < num2)
+                    result = num2 - num1;
+                else
+                    result = num1 - num2;
+
                 return result;
             }
 
